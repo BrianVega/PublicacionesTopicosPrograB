@@ -7,11 +7,13 @@ public class Principal {
    static Scanner leer = new Scanner(System.in);
     public static void main(String[] args) {
         int r = 0, opc, tipoPubli;
-      //Se podrá realizar un ArrayList de tipo Object?
-      //Pregunta de reflexión y de calificación
+      //Se podrÃ¡ realizar un ArrayList de tipo Object?
+      //Pregunta de reflexiÃ³n y de calificaciÃ³n
+       /*Respuesta: No puede hacer el paso a ArrayList debido a que no se puede
+       instanciar una clase abstracta como lo es la clase publicaciones*/
       
         do{
-        System.out.println("\n¿Desea ingresar al menu? ");
+        System.out.println("\nÂ¿Desea ingresar al menu? ");
          System.out.println("[1] - SI ");        
          System.out.println("[2] - NO ");
          System.out.print("Opcion: ");
@@ -21,9 +23,9 @@ public class Principal {
             opc = menu();
             switch(opc){
                case 1:
-                  System.out.println("\nSeleccione el tipo de publicación");         
+                  System.out.println("\nSeleccione el tipo de publicaciÃ³n");         
                   System.out.println("[1] Revista");
-                  System.out.println("[2] Periódico");
+                  System.out.println("[2] PeriÃ³dico");
                   System.out.println("[3] Libro");  
                   System.out.print("Opcion: ");
                      tipoPubli = leer.nextInt();
@@ -60,7 +62,7 @@ public class Principal {
             numero = leer.nextInt();
           System.out.print("anio: ");
             anio = leer.nextInt();
-          System.out.print("Número de páginas: ");
+          System.out.print("NÃºmero de pÃ¡ginas: ");
             numPag = leer.nextInt();
           revista.setISSN(issn);
           revista.setTitulo(titulo);
@@ -83,7 +85,7 @@ public class Principal {
             editor = leer.nextLine();
           System.out.print("Precio: $");
             precio = leer.nextFloat();
-          System.out.print("Número de páginas: ");
+          System.out.print("NÃºmero de pÃ¡ginas: ");
             numPag = leer.nextInt();
           periodico.setSecciones(secciones);
           periodico.setEditor(editor);
@@ -109,7 +111,7 @@ public class Principal {
             edicion = leer.nextLine();
           System.out.print("Precio: ");
             precio = leer.nextFloat();
-          System.out.print("Número de páginas: ");
+          System.out.print("NÃºmero de pÃ¡ginas: ");
             numPag = leer.nextInt();
           libro.setISBN(isbn);
           libro.setTitulo(titulo);
@@ -125,9 +127,9 @@ public class Principal {
       public static int menu(){
       int opc=0;
       //do{
-            System.out.println("\n~~~~~~~~ M E N Ú ~~~~~~~~");
-            System.out.println("[1] Alta publicación");
-            System.out.println("[2] Mostrar publicación");
+            System.out.println("\n~~~~~~~~ M E N Ãš ~~~~~~~~");
+            System.out.println("[1] Alta publicaciÃ³n");
+            System.out.println("[2] Mostrar publicaciÃ³n");
             System.out.println("[3] Salir");
             System.out.print("opcion: ");
                opc = leer.nextInt();   
@@ -146,7 +148,7 @@ public class Principal {
                    rev1 = (Revista)publicaciones[i];
                     System.out.println("----REVISTA----");
                     System.out.println("ISSN: " + rev1.getISSN());
-                    System.out.println("Título: " + rev1.getTitulo());
+                    System.out.println("TÃ­tulo: " + rev1.getTitulo());
                     System.out.println("Precio: " + rev1.getPrecio());
                     System.out.println("Numero: " + rev1.getNumero());
                     System.out.println("Anio: " + rev1.getAnio());
